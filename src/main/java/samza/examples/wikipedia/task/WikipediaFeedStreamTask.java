@@ -19,25 +19,41 @@
 
 package samza.examples.wikipedia.task;
 
+import java.util.HashMap;
 import java.util.Map;
+
 import org.apache.samza.system.IncomingMessageEnvelope;
 import org.apache.samza.system.OutgoingMessageEnvelope;
 import org.apache.samza.system.SystemStream;
 import org.apache.samza.task.MessageCollector;
 import org.apache.samza.task.StreamTask;
 import org.apache.samza.task.TaskCoordinator;
-import samza.examples.wikipedia.system.WikipediaFeed.WikipediaFeedEvent;
+
 
 /**
  * This task is very simple. All it does is take messages that it receives, and
  * sends them to a Kafka topic called wikipedia-raw.
  */
 public class WikipediaFeedStreamTask implements StreamTask {
-  private static final SystemStream OUTPUT_STREAM = new SystemStream("kafka", "wikipedia-raw");
+ // private static final SystemStream OUTPUT_STREAM = new SystemStream("kafka", "feed-test-output");
 
-  @Override
+  @SuppressWarnings("unchecked")
+@Override
   public void process(IncomingMessageEnvelope envelope, MessageCollector collector, TaskCoordinator coordinator) {
-    Map<String, Object> outgoingMap = WikipediaFeedEvent.toMap((WikipediaFeedEvent) envelope.getMessage());
-    collector.send(new OutgoingMessageEnvelope(OUTPUT_STREAM, outgoingMap));
+	  Map<String, Object> jsonObject = (Map<String, Object>) envelope.getMessage();
+	  try {
+       	
+	    	String name=(String)jsonObject.get("name");
+	    	String Company=(String)jsonObject.get("Company");
+	    	String Target=(String)jsonObject.get("Target");
+	    	Map<String, Object> parsedJsonObject =new HashMap<String, Object>();
+	    	parsedJsonObject.put("name",name);
+	    	parsedJsonObject.put("Company",Company);
+	    	parsedJsonObject.put("Target",Target);
+
+	      collector.send(new OutgoingMessageEnvelope(new SystemStream("kafka", "feed-test-output"), parsedJsonObject));
+	    } catch (Exception e) {
+	      System.err.println("Unable to parse line: " + jsonObject);
+	    }
   }
 }
