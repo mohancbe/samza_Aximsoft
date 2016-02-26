@@ -1,4 +1,4 @@
-package samza.examples.kafka;
+package com.aximsoft.infiswift.util;
 
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerIterator;

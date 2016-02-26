@@ -1,4 +1,4 @@
-package samza.examples.kafka;
+package com.aximsoft.infiswift.util;
 
 import java.io.IOException;
 import java.util.ArrayList;

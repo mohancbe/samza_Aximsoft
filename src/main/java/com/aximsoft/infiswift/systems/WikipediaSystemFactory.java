@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package samza.examples.wikipedia.system;
+package com.aximsoft.infiswift.systems;
 
 import org.apache.samza.SamzaException;
 import org.apache.samza.config.Config;

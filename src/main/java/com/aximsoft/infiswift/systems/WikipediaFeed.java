@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package samza.examples.wikipedia.system;
+package com.aximsoft.infiswift.systems;
 
 import java.io.IOException;
 import java.util.HashMap;

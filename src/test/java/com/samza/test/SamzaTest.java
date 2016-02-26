@@ -3,9 +3,9 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import samza.examples.kafka.KafkaMessageConsumer;
-import samza.examples.kafka.KafkaMessageProducer;
-import samza.examples.kafka.ScriptRunner;
+import com.aximsoft.infiswift.util.KafkaMessageConsumer;
+import com.aximsoft.infiswift.util.KafkaMessageProducer;
+import com.aximsoft.infiswift.util.ScriptRunner;
 
 
 public class SamzaTest {

@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package samza.examples.wikipedia.task;
+package com.aximsoft.infiswift.tasks;
 
 import java.util.HashMap;
 import java.util.Map;

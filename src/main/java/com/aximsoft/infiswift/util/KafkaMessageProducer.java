@@ -1,4 +1,4 @@
-package samza.examples.kafka;
+package com.aximsoft.infiswift.util;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;

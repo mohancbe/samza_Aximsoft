@@ -17,17 +17,19 @@
  * under the License.
  */
 
-package samza.examples.wikipedia.system;
+package com.aximsoft.infiswift.systems;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.samza.Partition;
 import org.apache.samza.metrics.MetricsRegistry;
 import org.apache.samza.system.IncomingMessageEnvelope;
 import org.apache.samza.system.SystemStreamPartition;
 import org.apache.samza.util.BlockingEnvelopeMap;
-import samza.examples.wikipedia.system.WikipediaFeed.WikipediaFeedEvent;
-import samza.examples.wikipedia.system.WikipediaFeed.WikipediaFeedListener;
+
+import com.aximsoft.infiswift.systems.WikipediaFeed.WikipediaFeedEvent;
+import com.aximsoft.infiswift.systems.WikipediaFeed.WikipediaFeedListener;
 
 public class WikipediaConsumer extends BlockingEnvelopeMap implements WikipediaFeedListener {
   private final List<String> channels;
