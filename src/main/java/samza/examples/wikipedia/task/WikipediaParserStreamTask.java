@@ -34,7 +34,7 @@ public class WikipediaParserStreamTask implements StreamTask {
   @Override
   public void process(IncomingMessageEnvelope envelope, MessageCollector collector, TaskCoordinator coordinator) {
     Map<String, Object> jsonObject = (Map<String, Object>) envelope.getMessage();
-  
+ 
     
     try {
          	

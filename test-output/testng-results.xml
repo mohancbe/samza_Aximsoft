@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="175525" started-at="2016-02-25T13:45:12Z" finished-at="2016-02-25T13:48:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="175525" started-at="2016-02-25T13:45:12Z" finished-at="2016-02-25T13:48:08Z">
+      <class name="com.samza.test.SamzaTest">
+        <test-method status="PASS" signature="SamzaTaskTest()[pri:0, instance:com.samza.test.SamzaTest@35fb3008]" name="SamzaTaskTest" duration-ms="175505" started-at="2016-02-25T19:15:12Z" finished-at="2016-02-25T19:18:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SamzaTaskTest -->
+      </class> <!-- com.samza.test.SamzaTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
