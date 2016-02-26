@@ -1,4 +1,4 @@
-package com.samza.test;
+package com.aximsoft.infiswift.test;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
